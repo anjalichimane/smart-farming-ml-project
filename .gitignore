@@ -4,5 +4,6 @@ __pycache__/
 *.pkl
 *.keras
 .env
+.vite/
 node_modules/
 dist/
