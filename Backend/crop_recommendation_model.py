@@ -4,7 +4,6 @@ import joblib
 import os 
 import matplotlib.pyplot as plt
 import seaborn as sns 
-
 from sklearn.model_selection import train_test_split, learning_curve
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
@@ -103,7 +102,6 @@ def train_and_save_model(df):
     accuracy = accuracy_score(y_test, y_pred)
     print(f"Model Accuracy on Test Set (Final Score): {accuracy:.4f}")
     print("\nClassification Report on Test Set:\n", classification_report(y_test, y_pred))
-
     # Return X (full feature set) for use in the learning curve plot
     return model, scaler, y_test, y_pred, X
 

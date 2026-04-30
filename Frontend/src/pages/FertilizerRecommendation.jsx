@@ -133,8 +133,10 @@ export default function FertilizerRecommendation() {
               <option value="">Select Soil Color</option>
               <option value="Black">Black</option>
               <option value="Red">Red</option>
-              <option value="Brown">Brown</option>
-              <option value="Yellow">Yellow</option>
+              <option value="Medium Brown">Medium Brown</option>
+              <option value="Dark Brown">Dark Brown</option>
+              <option value="Reddish Brown">Reddish Brown</option>
+              <option value="Light Brown">Light Brown</option>
             </select>
           </div>
 
@@ -232,6 +234,16 @@ export default function FertilizerRecommendation() {
               <option value="Maize">Maize</option>
               <option value="Cotton">Cotton</option>
               <option value="Sugarcane">Sugarcane</option>
+              <option value="Tur">Rice</option>
+              <option value="Moong">Moong</option>
+              <option value="Gram">Gram</option>
+              <option value="Turmeric">Turmeric</option>
+              <option value="Soybean">Soybean</option>
+              <option value="Jowar">Jowar</option>
+              <option value="Groundnut">Groundnut</option>
+              <option value="Grapes">Grapes</option>
+              <option value="Ginger">Ginger</option>
+              <option value="Urad">Urad</option>
             </select>
           </div>
 
