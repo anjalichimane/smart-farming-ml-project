@@ -27,12 +27,13 @@ const DiseasePrediction = () => {
     // FIX: Changed "image_file" to "file" to match FastAPI backend parameter
     formData.append("file", selectedImage);
 
-    try {
-      const response = await fetch("http://127.0.0.1:8000/predict/disease", {
-        method: "POST",
-        // Note: Do not manually set Content-Type; the browser handles it for FormData
-        body: formData,
-      });
+    const API_URL = "https://smart-farming-ml-project.onrender.com";
+
+try {
+  const response = await fetch(`${API_URL}/predict/disease`, {
+    method: "POST",
+    body: formData,
+  });
 
       const data = await response.json();
 
