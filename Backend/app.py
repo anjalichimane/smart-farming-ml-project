@@ -22,7 +22,7 @@ from motor.motor_asyncio import AsyncIOMotorClient
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ML_ASSETS = {}
 
-MongoDB Configuration
+# MongoDB Configuration
 MONGO_DETAILS = "mongodb://localhost:27017"
 client = AsyncIOMotorClient(MONGO_DETAILS)
 database = client.plant_disease_db
@@ -36,7 +36,6 @@ async def lifespan(app: FastAPI):
     # 1. Load Crop & Fertilizer 
     try:
         ML_ASSETS["crop"] = joblib.load(os.path.join(BASE_DIR, "crop_recommendation_rf_model.pkl"))
-        joblib.load(os.path.join(BASE_DIR, "models", "crop_recommendation_rf_model.pkl"))
         ML_ASSETS["scaler"] = joblib.load(os.path.join(BASE_DIR, "crop_recommendation_scaler.pkl"))
         fert_data = joblib.load(os.path.join(BASE_DIR, "fertilizer_model.pkl"))
 
