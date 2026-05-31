@@ -36,7 +36,8 @@ async def lifespan(app: FastAPI):
     try:
         ML_ASSETS["crop"] = joblib.load(os.path.join(BASE_DIR, "crop_recommendation_rf_model.pkl"))
         ML_ASSETS["scaler"] = joblib.load(os.path.join(BASE_DIR, "crop_recommendation_scaler.pkl"))
-        fert_data = joblib.load(os.path.join(BASE_DIR, "fertilizer_models.pkl"))
+        fert_data = joblib.load(os.path.join(BASE_DIR, "fertilizer_model.pkl"))
+        
         ML_ASSETS["fert_model"] = fert_data['model']
         ML_ASSETS["fert_enc"] = fert_data['encoder']
         ML_ASSETS["district_enc"] = fert_data['district_encoder']
