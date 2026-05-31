@@ -2,8 +2,7 @@
 import React, { useState } from "react";
 import bgImage from "../assets/crop_bg.jpeg";
 
-// const API_BASE = "http://127.0.0.1:8000";
-const API_URL = "https://smart-farming-ml-project.onrender.com";
+const API_BASE = "http://127.0.0.1:8000";
 
 export default function CropRecommendation() {
   const [form, setForm] = useState({

@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import bgImage from "../assets/fertilizer_bg.jpeg";
 
 // Define the Backend URL
-// const API_BASE = "http://127.0.0.1:8000";
-const API_URL = "https://smart-farming-ml-project.onrender.com";
+const API_BASE = "http://127.0.0.1:8000";
 
 export default function FertilizerRecommendation() {
   const [formData, setFormData] = useState({

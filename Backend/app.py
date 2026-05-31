@@ -22,18 +22,12 @@ from motor.motor_asyncio import AsyncIOMotorClient
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ML_ASSETS = {}
 
-# MongoDB Configuration
-# MONGO_DETAILS = "mongodb://localhost:27017"
-# client = AsyncIOMotorClient(MONGO_DETAILS)
-# database = client.plant_disease_db
-# user_collection = database.get_collection("users")
-
-# MongoDB Configuration
-MONGO_DETAILS = os.getenv("MONGO_URI")
-
+MongoDB Configuration
+MONGO_DETAILS = "mongodb://localhost:27017"
 client = AsyncIOMotorClient(MONGO_DETAILS)
 database = client.plant_disease_db
 user_collection = database.get_collection("users")
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
